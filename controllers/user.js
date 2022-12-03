@@ -29,7 +29,7 @@ const userLogin = async (req, res) => {
     const isValidUser = await user.comparePassword(password);
 
     if (user && isValidUser) {
-      res.status(200).send({ msg: "Login successful", id: user._id });
+      res.status(200).send({ msg: "Login successful", _id: user._id });
       return;
     }
     res.status(500).send({});
