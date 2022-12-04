@@ -1,22 +1,22 @@
 # Todo Application
 
-Application with to maintain a todo-list and it's CRUD operations
+Application to maintain a todo-list and it's CRUD operations
 
 ## Technology used
 
 Mongo DB, Node JS, Express JS, Mongoose.
 
-# Instructions
+# Instructions to run the project
 
-### clone the repository
+### Clone the repository
 
-`https://github.com/KavyaMVG/Chat-app-backend.git`
+`https://github.com/KavyaMVG/todo-app-backend.git`
 
-### change directory to the project directory
+### Change directory to the project directory
 
 `cd todo-backend`
 
-### Dependencies
+### Install all the dependencies
 
 `npm install`
 
