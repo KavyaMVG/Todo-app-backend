@@ -31,7 +31,8 @@ TOKEN_KEY=<Some-Secure-Key>
 
 ### Run the project
 
-`nodemon app.js`. <br>
+`nodemon app.js` <br>
+
 If you have trouble running the project with nodemon make sure you install it or you can just use `node app.js`
 
 ### Using the API
