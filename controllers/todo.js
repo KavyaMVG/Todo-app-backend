@@ -41,9 +41,6 @@ const getAllTodo = async (req, res) => {
 
 const searchTodo = async (req, res) => {
   const { search, userId } = req.query;
-  if (!search) {
-    return;
-  }
   try {
     const response = await todoModel.find({
       title: { $regex: search, $options: "i" },
