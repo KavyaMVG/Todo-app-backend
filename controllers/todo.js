@@ -1,5 +1,6 @@
 const { todoModel } = require("../models/todo");
 
+
 const addTodo = async (req, res) => {
   try {
     const newTodo = req.body;
@@ -7,7 +8,6 @@ const addTodo = async (req, res) => {
     const response = await todo.save();
     res.status(201).send({ response });
   } catch (err) {
-    console.log(err);
     res.status(400).send(`server error${err}`);
   }
 };
@@ -15,26 +15,21 @@ const addTodo = async (req, res) => {
 const deleteTodo = async (req, res) => {
   try {
     const deleteId = req.query.id;
-    const response = await todoModel.deleteOne({
-      deleteId: deleteId,
-    });
+    const response = await todoModel.deleteOne(deleteId);
     res.status(200).send({ msg: response });
   } catch (err) {
-    console.log(err);
     res.status(400).send(`server Error${err}`);
   }
 };
 
 const getAllTodo = async (req, res) => {
   const { userId } = req.params;
-  console.log(userId);
   try {
     const allTasks = await todoModel.find({
       userId,
     });
     res.status(200).send(allTasks);
   } catch (err) {
-    console.log(err);
     res.status(400).send({ msg: "Server error", err });
   }
 };
@@ -48,7 +43,6 @@ const searchTodo = async (req, res) => {
     });
     res.status(200).send(response);
   } catch (err) {
-    console.log(err);
     res.status(400).send({ msg: "Server error" });
   }
 };
@@ -68,7 +62,6 @@ const updatedTodo = async (req, res) => {
     );
     res.status(200).send({ response });
   } catch (err) {
-    console.log(err);
     res.status(400).send({ msg: "Server error", err });
   }
 };
