@@ -9,7 +9,7 @@ node_modules/
 # Build output
 dist/
 build/
-
+xw
 
 # OS-specific files
 .DS_Store
